@@ -12,8 +12,7 @@ body {
   background-position: center -340px;*/
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bold;
-  overflow: hidden;
-  perspective: 10px;
+  overflow: hidden;  
 }
 
 a {
@@ -32,14 +31,18 @@ a {
 	height: 160px;
 	width: 160px;
 	border-radius: 50%;
-	background-color: white;
 	margin-right: 10px;
 	z-index: 4;
 	position: fixed;
 	transform: translateX(10rem) translateY(-1rem);
 	font-family: lobster;
 	font-size: 32px;
+	color: black;
 	background: linear-gradient(323deg, rgba(253,187,45,1) 0%, rgba(195,34,107,0.3477766106442577) 100%);
+	box-shadow: 0 0 50px orangered, 0 0 8px darkred;
+	text-shadow: 1px 2px 40px whitesmoke;
+
+
 } 
 
 .navbar {
@@ -80,9 +83,10 @@ a {
   padding: 2rem;
   background-color: rgba(221, 221, 221, 0);
   text-decoration: none;
-  margin-right: 2rem;  
   text-align: center;
   transition: background-color 0.6s ease-in-out;
+  margin-left: 2rem;
+  border: none;
  }
  .menu:hover {
   z-index: 1;
@@ -93,6 +97,22 @@ a {
 .menu:hover a   {
 	color: whitesmoke;
 }
+
+.hamburger {
+  display: block;	
+  cursor: pointer;
+  padding: 0px;
+  background: blueviolet;
+}
+
+.line {
+  width: 20px;
+  height: 4px;
+  background-color: #000;
+  margin: 3px 0;
+  border-radius: 1rem;
+}
+
 
 .dropdown {
   position: relative;
@@ -110,7 +130,7 @@ a {
   display: none;
   position: absolute;
   text-decoration: none;
-  z-index: 2;
+  z-index: -4;
   
   color: whitesmoke;
   padding-left: 2rem;
@@ -130,7 +150,7 @@ a {
   grid-template-rows: 1fr;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   animation: appear 1100ms forwards;
-  background-color: rgba(221, 221, 221, 0.7);
+  background-color: rgba(221, 221, 221, 1);
 }
 
 .dropdown-content a:hover {
@@ -164,7 +184,7 @@ header {
 } 
 
 .back-ground {
-  transform: translateZ(-10px) scale(3) translateY(34rem);
+  transform: translateZ(-10px) scale(2.5) translateY(34rem);
 
 }
 
@@ -172,7 +192,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  transform: translateY(-35rem);
+  transform: translateY(-28rem);
 }
 
 .container > * {
@@ -187,13 +207,16 @@ header {
 .left-column {
   margin-right: auto;
   margin-bottom: 6rem;
-  color: black;
-  text-shadow: 1px 1px 2px lightblue;
+  color: whitesmoke;
+  text-shadow: 1px 2px 4px black;
+  backdrop-filter: blur(4px);
 }
 
 .right-column {
   margin-left: auto;
   margin-bottom: 6rem;
+  text-shadow: 1px 2px 10px black;
+  backdrop-filter: blur(4px);
 }
 .left-column:first-of-type {
   height: 200px;
@@ -201,7 +224,7 @@ header {
 
 
 h1 {
-    background-image: url("logo1.png"); /*rgba(53,191,201,0.99)*/
+    background-image: url("logof.png"); /*rgba(53,191,201,0.99)*/
 	border-radius: 50%;
 	float: left;
 	text-align: center;
@@ -218,6 +241,56 @@ h1 {
     color: teal;
     text-shadow: 1px 1px 2px whitesmoke;
         }
+
+.mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 9999;
+  background: linear-gradient(323deg, rgba(45, 253, 220, 1) 0%, rgba(34, 195, 167, 0.95) 100%);
+  padding-bottom: 1rem;
+}  
+.button {
+    display: grid;    
+    padding: 10px 20px;
+    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,0.30575980392156865) 100%);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .button:hover {
+    background: radial-gradient(circle at center, rgba(230, 57, 70, 1) 0%, rgba(45, 253, 220, .7) 100%);
+  }
+  
+  .button:active {
+    transform: translateY(1px);
+  }
+
+.cross-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  transform: translateY(-1rem);
+}
+
+.cross-button:hover {
+  color: #f00;
+}
 
 
 
@@ -246,7 +319,37 @@ h1 {
   
 }
 
-@media screen and (max-width: 768px) {
+
+
+@media screen and (max-width: 1500px) {
+  
+  .left-column:first-of-type  {
+  height: 250px;
+  transition: all smooth;  
+}
+
+  .emblem {
+    transform: translateX(1rem);
+    margin: 0 auto;
+    height: 120px;
+	width: 120px;
+    font-size: 22px;
+  } 
+
+}
+
+@media screen and (max-width: 1309px) {
+
+.left-column:first-of-type  {
+  height: 320px;
+  transition: all smooth;  
+}
+
+
+}
+
+
+@media screen and (max-width: 1183px) {
   .navbar {
     display: flex;
     flex-direction: column;
@@ -264,7 +367,7 @@ h1 {
 
   .menu {
   	display: inline-block;
-  	margin-left: 3rem;
+  	margin-left: 35rem;
 
   	  }
   
@@ -322,6 +425,13 @@ h1 {
   
    
   .back-ground {
-    transform: translateZ(-10px) scale(2) translateY(35rem);
+    transform: translateZ(-10px) scale(1.5) translateY(35rem);
   }
 }
+
+@media screen and (max-width: 710px) {
+	.menu {
+  	display: inline-block;
+  	margin-left: 18rem;
+
+  	  }
