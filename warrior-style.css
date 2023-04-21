@@ -11,8 +11,9 @@ body {
   height: 500px;
   background-position: center -340px;*/
   font-family: 'Roboto Condensed', sans-serif;
-  font-weight: bold;
-  overflow: hidden;  
+  overflow: hidden;
+  font-weight: bold;  
+
 }
 
 a {
@@ -34,19 +35,22 @@ a {
 	margin-right: 10px;
 	z-index: 4;
 	position: fixed;
-	transform: translateX(10rem) translateY(-1rem);
+	transform: translateX(10rem) translateY(-4rem);
 	font-family: lobster;
 	font-size: 32px;
 	color: black;
 	background: linear-gradient(323deg, rgba(253,187,45,1) 0%, rgba(195,34,107,0.3477766106442577) 100%);
 	box-shadow: 0 0 50px orangered, 0 0 8px darkred;
 	text-shadow: 1px 2px 40px whitesmoke;
+    background-size: cover;
+	justify-content: center;
+    align-items: center;
 
 
 } 
 
 .navbar {
-	background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,0.30575980392156865) 100%);
+	background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,0.30) 100%);
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -69,7 +73,7 @@ a {
  }
  .nav-item:hover {
   z-index: 1;
-  background-color: rgba(221, 221, 221, 0.5);
+  background-color: rgba(221, 221, 221, 0.9);
   color: whitesmoke;
   text-decoration-color: whitesmoke;
 }
@@ -192,38 +196,75 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  transform: translateY(-28rem);
+  transform: translateY(-31rem);
 }
 
 .container > * {
   flex-basis: calc(50% - 10px);
   margin: 5px;
   background: linear-gradient(323deg, rgba(253, 187, 45, 1) 0%, rgba(195, 34, 107, 0.3477766106442577) 100%);
-  color: white;
+  color: black;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: 16px;
 }
+
 
 .left-column {
   margin-right: auto;
+  margin-left: 2rem;
   margin-bottom: 6rem;
-  color: whitesmoke;
-  text-shadow: 1px 2px 4px black;
   backdrop-filter: blur(4px);
+  padding-bottom: 18px;
+  position: relative;
 }
 
 .right-column {
   margin-left: auto;
+  margin-right: 2rem;position: relative;
   margin-bottom: 6rem;
-  text-shadow: 1px 2px 10px black;
   backdrop-filter: blur(4px);
+  background: linear-gradient(323deg, rgba(34,193,195,1) 0%, rgba(195, 34, 107, 0.347) 100%);
+  padding-bottom: 18px;
+  position: relative;
 }
 .left-column:first-of-type {
-  height: 200px;
+  height: 280px;
+}
+
+h2 {
+	text-align: center;
+}
+p {
+	margin-bottom: 20px;
+}
+.click {
+  position: absolute; /* position the click div inside the right column div */
+  bottom: 10px; /* adjust the distance from the bottom of the right column */
+  left: 50%; /* move the click div to the center of the right column */
+  transform: translateX(-50%); /* center the click div */
+  text-align: center; /* center the anchor tag inside the click div */
+  }
+
+.click a {
+  display: inline-block; /* make the anchor tag a block element to add padding */
+  padding: 10px 20px; /* add padding to create the button look */
+  background-color: rgba(0, 123, 255, 0.9); /* set the background color */
+  color: #fff; /* set the font color */
+  border-radius: 1rem; /* add rounded corners to the button */
+  text-decoration: none; /* remove the underline from the anchor tag */
+  cursor: pointer; /* change the cursor to a pointer when hovering over the button */
+  transition: background-color 0.2s ease-in-out; /* add a smooth transition for the background color */
+}
+
+.click a:hover {
+  background-color: #0062cc; /* darken the background color on hover */
 }
 
 
-h1 {
+
+.logo {
     background-image: url("logof.png"); /*rgba(53,191,201,0.99)*/
 	border-radius: 50%;
 	float: left;
@@ -242,6 +283,31 @@ h1 {
     text-shadow: 1px 1px 2px whitesmoke;
         }
 
+    .left-column .icon {
+    	float: left;
+    }    
+    .right-column .icon {
+    	float: right;
+    }    
+
+.icon {
+    background-image: url("tree.png"); /*rgba(53,191,201,0.99)*/
+	border-radius: 50%;
+	text-align: center;
+	transform: translateY(-1rem);
+	shape-outside: circle();
+	margin: 16px;
+	width: 220px;
+	height: 220px;
+	display: block;
+	background-size: cover;
+	justify-content: center;
+    align-items: center;
+    text-overflow: none;
+    color: teal;
+    text-shadow: 1px 1px 2px whitesmoke;
+        }        
+
 .mobile {
   display: grid;
   grid-template-columns: 1fr;
@@ -258,7 +324,7 @@ h1 {
 .button {
     display: grid;    
     padding: 10px 20px;
-    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,0.30575980392156865) 100%);
+    background: radial-gradient(circle, rgba(253,187,45,0.306)  0%, rgba(34,193,195,1) 100%);
     color: white;
     text-align: center;
     text-decoration: none;
@@ -268,7 +334,10 @@ h1 {
   }
   
   .button:hover {
-    background: radial-gradient(circle at center, rgba(230, 57, 70, 1) 0%, rgba(45, 253, 220, .7) 100%);
+     animation: glowing-text-shadow-animation .5s ease-in-out,  glow .5s ease-in-out;
+     box-shadow: 0 0 40px teal;
+     text-shadow: 0 0 30px teal;
+
   }
   
   .button:active {
@@ -305,6 +374,9 @@ h1 {
         text-shadow: none;
     }
     to {
+
+    	text-shadow: 0 0 40px teal;
+
         /*text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #008080, 0 0 70px #008080, 0 0 80px #008080, 0 0 100px #008080;*/
     }
   
@@ -324,15 +396,15 @@ h1 {
 @media screen and (max-width: 1500px) {
   
   .left-column:first-of-type  {
-  height: 250px;
+  height: 310px;
   transition: all smooth;  
 }
 
   .emblem {
     transform: translateX(1rem);
     margin: 0 auto;
-    height: 120px;
-	width: 120px;
+    height: 140px;
+	width: 140px;
     font-size: 22px;
   } 
 
@@ -341,7 +413,7 @@ h1 {
 @media screen and (max-width: 1309px) {
 
 .left-column:first-of-type  {
-  height: 320px;
+  height: 368px;
   transition: all smooth;  
 }
 
@@ -387,6 +459,8 @@ h1 {
 
   .left-column:first-of-type {
   height: auto;
+  margin-right: auto;
+  margin-left: auto;
   flex-basis: calc(100% - 10px);
 }
   
@@ -405,27 +479,50 @@ h1 {
 
   }
   
-  h1 {
+  .logo {
     margin-right: 1rem; 
     width: 150px;
     height: 150px;
     transform: translateY(0);
     float: right;
   }
+
+  .icon {
+    margin-right: 1rem; 
+    width: 80px;
+    height: 80px;
+    transform: translateY(0);
+    
+  }
+
   .container { 
-  	transform: translateY(-32rem);
+  	transform: translateY(-42rem);
   }
   .emblem {
     transform: translateX(1rem) translateY(-1rem);
     margin: 0 auto;
-    height: 120px;
-	width: 120px;
+    height: 140px;
+	width: 140px;
     font-size: 22px;
   } 
+  .left-column {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 6rem;
+
+  flex-basis: calc(100% - 10px);
+}
+
+.right-column {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 6rem;
+  flex-basis: calc(100% - 10px);
+}
   
    
   .back-ground {
-    transform: translateZ(-10px) scale(1.5) translateY(35rem);
+    transform: translateZ(-10px) scale(1.5) translateX(-15rem) translateY(28rem);
   }
 }
 
