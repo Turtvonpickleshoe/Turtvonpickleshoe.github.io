@@ -17,7 +17,7 @@ menuButton.addEventListener('click', () => {
     <a href="calendar.html" class="button">Schedule</a>
     <a href="contact.html" class="button">Get Involved</a>
     <a href="about.html" class="button">About Us</a>
-    <a href="donate.html" class="button">Donate</a>w
+    <a href="donate.html" class="button">Donate</a>
   `;
 
   // Insert the new div element at the beginning of the body
