@@ -496,7 +496,7 @@ p {
   }
 
   .container { 
-  	transform: translateY(-22rem);
+  	transform: translateY(-16rem);
   }
   .emblem {
     transform: translateX(1rem) translateY(-1rem);
