@@ -13,11 +13,11 @@ menuButton.addEventListener('click', () => {
   mobileDiv.innerHTML = `
     <div class="cross-button">&times;</div>
     <br><br>
-    <a href="https://www.example.com" class="button">Click me</a>
-    <a href="https://www.example.com" class="button">Click me</a>
-    <a href="https://www.example.com" class="button">Click me</a>
-    <a href="https://www.example.com" class="button">Click me</a>
-    <a href="https://www.example.com" class="button">Click me</a>
+    <a href="programs.html" class="button">Programs</a>
+    <a href="calendar.html" class="button">Schedule</a>
+    <a href="contact.html" class="button">Get Involved</a>
+    <a href="about.html" class="button">About Us</a>
+    <a href="donate.html" class="button">Donate</a>w
   `;
 
   // Insert the new div element at the beginning of the body
