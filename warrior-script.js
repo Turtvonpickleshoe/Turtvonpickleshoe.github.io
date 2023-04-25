@@ -7,7 +7,7 @@ menuButton.addEventListener('click', () => {
   const mobileDiv = document.createElement('div');
 
   // Set the class attribute of the new div element
-  mobileDiv.setAttribute('class', 'mobile');
+  mobileDiv.classList.add('mobile', 'mobile-clip');
 
   // Set the innerHTML of the new div element
   mobileDiv.innerHTML = `
@@ -16,7 +16,7 @@ menuButton.addEventListener('click', () => {
     <a href="programs.html" class="button">Programs</a>
     <a href="calendar.html" class="button">Schedule</a>
     <a href="contact.html" class="button">Get Involved</a>
-    <a href="about.html" class="button">About Us</a>
+    <a href="about-us.html" class="button">About Us</a>
     <a href="donate.html" class="button">Donate</a>
   `;
 
@@ -29,6 +29,10 @@ menuButton.addEventListener('click', () => {
   // Add a click event listener to the cross-button element
   crossButton.addEventListener('click', () => {
     // Remove the mobile div from the DOM
-    document.body.removeChild(mobileDiv);
+    event.stopPropagation(); // prevent event from bubbling up to parent
+    mobileDiv.classList.add('mobile-removed');
+    setTimeout(function() { 
+        document.body.removeChild(mobileDiv);
+        }, 740);
   });
 });

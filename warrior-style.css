@@ -35,7 +35,7 @@ a {
 	margin-right: 10px;
 	z-index: 4;
 	position: fixed;
-	transform: translateX(10rem) translateY(-4rem);
+	transform: translateX(10rem) translateY(-1.3rem);
 	font-family: lobster;
 	font-size: 32px;
 	color: black;
@@ -320,6 +320,9 @@ p {
   z-index: 9999;
   background: linear-gradient(323deg, rgba(45, 253, 220, 1) 0%, rgba(34, 195, 167, 0.95) 100%);
   padding-bottom: 1rem;
+  border-radius:  ;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
 }  
 .button {
     display: grid;    
@@ -361,6 +364,17 @@ p {
   color: #f00;
 }
 
+.mobile-clip {
+clip-path: polygon(91% 0, 100% 0, 100% 8%, 91% 8%);
+animation: appear 1100ms forwards;
+
+}
+
+.mobile-removed {
+  animation: dis-appear .8s ease-in-out;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
 
 
 
@@ -369,6 +383,14 @@ p {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
+
+@keyframes dis-appear {
+  100% {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+
+  }
+}
+
 @keyframes glowing-text-shadow-animation {
     from {
         text-shadow: none;
@@ -496,7 +518,7 @@ p {
   }
 
   .container { 
-  	transform: translateY(-20rem);
+  	transform: translateY(-42rem);
   }
   .emblem {
     transform: translateX(1rem) translateY(-1rem);
@@ -521,12 +543,29 @@ p {
 }
   
    
-  .back-ground {
-    transform: translateZ(-10px) scale(1.5) translateX(-15rem) translateY(28rem);
-  }
+
 }
 
+@media screen and (max-height: 770px) {
+
+.container { 
+    transform: translateY(-30rem);
+  }
+
+  }
+
+  @media screen and (max-height: 700px) {
+
+.container { 
+    transform: translateY(-26rem);
+  }
+
+  }
+
 @media screen and (max-width: 710px) {
+    .back-ground {
+    transform: translateZ(-10px) scale(1.5) translateX(-15rem) translateY(28rem);
+  }
 	.menu {
   	display: inline-block;
   	margin-left: 18rem;
