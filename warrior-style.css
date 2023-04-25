@@ -555,12 +555,19 @@ animation: appear 1100ms forwards;
   }
 
   @media screen and (max-height: 700px) {
-
-.container { 
+  .container { 
     transform: translateY(-26rem);
   }
 
   }
+
+  @media screen and (max-height: 500px) {
+
+    .container { 
+    transform: translateY(-14rem);
+
+  }
+}
 
 @media screen and (max-width: 710px) {
     .back-ground {
