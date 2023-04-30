@@ -202,12 +202,17 @@ header {
 .container > * {
   flex-basis: calc(50% - 10px);
   margin: 5px;
-  background: linear-gradient(323deg, rgba(253, 187, 45, 1) 0%, rgba(195, 34, 107, 0.3477766106442577) 100%);
-  color: black;
+  background: linear-gradient(323deg, rgba(253, 187, 45, 1) 0%, rgba(195, 34, 107, 0.34) 100%);
+  color: black;   
   padding: 10px;
   border-radius: 1rem;
   font-weight: bold;
   font-size: 16px;
+}
+.left-column p {
+
+  
+
 }
 
 
@@ -228,7 +233,11 @@ header {
   background: linear-gradient(323deg, rgba(34,193,195,1) 0%, rgba(195, 34, 107, 0.347) 100%);
   padding-bottom: 18px;
   position: relative;
-}
+  color: whitesmoke;
+  text-shadow: 0 0 8px black;
+  }
+
+
 .left-column:first-of-type {
   height: 280px;
 }
@@ -262,10 +271,16 @@ p {
   background-color: #0062cc; /* darken the background color on hover */
 }
 
+.click a:active {
+    transform: translateY(1.5px);
+    box-shadow: 0 0 40px teal;
+    animation: glow .5s ease-in-out;
+  }
+
 
 
 .logo {
-    background-image: url("logof.png"); /*rgba(53,191,201,0.99)*/
+  background-image: url("logof.png"); /*rgba(53,191,201,0.99)*/
 	border-radius: 50%;
 	float: left;
 	text-align: center;
@@ -277,21 +292,21 @@ p {
 	display: block;
 	background-size: cover;
 	justify-content: center;
-    align-items: center;
-    text-overflow: none;
-    color: teal;
-    text-shadow: 1px 1px 2px whitesmoke;
+  align-items: center;
+  text-overflow: none;
+  color: teal;
+  text-shadow: 1px 1px 2px whitesmoke;
         }
 
-    .left-column .icon {
-    	float: left;
-    }    
-    .right-column .icon {
-    	float: right;
-    }    
+.left-column .icon {
+	float: left;
+}    
+.right-column .icon {
+	float: right;
+}    
 
 .icon {
-    background-image: url("tree.png"); /*rgba(53,191,201,0.99)*/
+  background-image: url("tree.png"); /*rgba(53,191,201,0.99)*/
 	border-radius: 50%;
 	text-align: center;
 	transform: translateY(-1rem);
@@ -302,10 +317,8 @@ p {
 	display: block;
 	background-size: cover;
 	justify-content: center;
-    align-items: center;
-    text-overflow: none;
-    color: teal;
-    text-shadow: 1px 1px 2px whitesmoke;
+  align-items: center;
+  text-overflow: none;
         }        
 
 .mobile {
@@ -339,9 +352,8 @@ p {
   .button:hover {
      animation: glowing-text-shadow-animation .5s ease-in-out,  glow .5s ease-in-out;
      box-shadow: 0 0 40px teal;
-     text-shadow: 0 0 30px teal;
-
-  }
+     text-shadow: 0 0 10px #fff, 0 0 20px #ff0000,
+      }
   
   .button:active {
     transform: translateY(1px);
@@ -355,13 +367,13 @@ p {
   height: 20px;
   font-size: 40px;
   font-weight: bold;
-  color: #555;
+  color: black /*#555*/;
   cursor: pointer;
   transform: translateY(-1rem);
 }
 
 .cross-button:hover {
-  color: #f00;
+  color: grey;
 }
 
 .mobile-clip {
@@ -397,7 +409,7 @@ animation: appear 1100ms forwards;
     }
     to {
 
-    	text-shadow: 0 0 40px teal;
+    	text-shadow: 0 0 40px whitesmoke;
 
         /*text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #008080, 0 0 70px #008080, 0 0 80px #008080, 0 0 100px #008080;*/
     }
