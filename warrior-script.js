@@ -23,16 +23,22 @@ menuButton.addEventListener('click', () => {
   // Insert the new div element at the beginning of the body
   document.body.insertBefore(mobileDiv, document.body.firstChild);
 
-  // Select the cross-button element
-  const crossButton = mobileDiv.querySelector('.cross-button');
+// Select the cross-button element
+const crossButton = mobileDiv.querySelector('.cross-button');
 
-  // Add a click event listener to the cross-button element
-  crossButton.addEventListener('click', () => {
-    // Remove the mobile div from the DOM
-    event.stopPropagation(); // prevent event from bubbling up to parent
-    mobileDiv.classList.add('mobile-removed');
-    setTimeout(function() { 
-        document.body.removeChild(mobileDiv);
-        }, 740);
-  });
+// Add a click event listener to the cross-button element
+crossButton.addEventListener('click', () => {
+  // Remove the mobile div from the DOM
+  event.stopPropagation(); // prevent event from bubbling up to parent
+  mobileDiv.classList.add('mobile-removed');
+  setTimeout(function() { 
+    document.body.removeChild(mobileDiv);
+  }, 740);
+
+  // Add the spinning animation to the cross-button element
+  crossButton.classList.add('spinning');
+  setTimeout(() => {
+    crossButton.classList.remove('spinning');
+  }, 1000); // remove spinning class after 1 second
+});
 });
