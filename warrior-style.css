@@ -102,6 +102,10 @@ a {
 	color: whitesmoke;
 }
 
+.menu:active {
+  transform: translateY(2px);
+}
+
 .hamburger {
   display: block;	
   cursor: pointer;
@@ -361,7 +365,6 @@ p {
 
 .cross-button {
   position: absolute;
-  top: 10px;
   right: 10px;
   width: 20px;
   height: 20px;
@@ -369,36 +372,45 @@ p {
   font-weight: bold;
   color: black /*#555*/;
   cursor: pointer;
-  transform: translateY(-1rem);
+  
 }
 
-.cross-button:hover {
-  color: grey;
+
+.spinning {
+  animation: spin 1s linear infinite;
+
 }
 
 .mobile-clip {
-clip-path: polygon(91% 0, 100% 0, 100% 8%, 91% 8%);
+clip-path: circle(0.3% at 100% 0);
 animation: appear 1100ms forwards;
 
 }
 
 .mobile-removed {
   animation: dis-appear .8s ease-in-out;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: circle(70.7% at 50% 50%);
   }
 
-
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 
 @keyframes appear {
   100% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: circle(70.7% at 50% 50%);
   }
 }
 
 @keyframes dis-appear {
   100% {
-    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    clip-path: circle(0.5% at 0 0);
 
   }
 }

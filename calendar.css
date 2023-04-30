@@ -8,7 +8,8 @@ body {
   background-size: cover;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bold;
-  text-align: center;  
+  text-align: center;
+  height: 3500px;  
 }
 
 a {
@@ -95,6 +96,9 @@ a {
 }
 .menu:hover a   {
   color: whitesmoke;
+}
+.menu:active {
+  transform: translateY(2px);
 }
 
 .hamburger {
@@ -212,29 +216,29 @@ a {
 
 .cross-button {
   position: absolute;
-  top: 10px;
   right: 10px;
   width: 20px;
   height: 20px;
   font-size: 40px;
   font-weight: bold;
-  color: #555;
+  color: black;
   cursor: pointer;
-  transform: translateY(-1rem);
+ }
+
+
+.spinning {
+  animation: spin 1s linear infinite;
 }
 
-.cross-button:hover {
-  color: #f00;
-}
 .mobile-clip {
-clip-path: polygon(91% 0, 100% 0, 100% 8%, 91% 8%);
+clip-path: circle(0.3% at 100% 0);
 animation: appear 1100ms forwards;
 
 }
 
 .mobile-removed {
   animation: dis-appear .8s ease-in-out;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: circle(70.7% at 50% 50%);
   }
 
     h1 {
@@ -281,16 +285,26 @@ animation: appear 1100ms forwards;
       }
 
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 
 @keyframes appear {
   100% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: circle(70.7% at 50% 50%);
   }
 }
 
 @keyframes dis-appear {
   100% {
-    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    clip-path: circle(0.5% at 0 0);
 
   }
 }
