@@ -288,7 +288,11 @@ animation: burger-appear 1100ms forwards;
       }
 .donor-box {
   margin-top: 10rem;
-}      
+} 
+.donor {
+  display: grid;
+  grid-template-columns: 1fr;
+}     
 
 
 @keyframes spin {
@@ -355,7 +359,7 @@ animation: burger-appear 1100ms forwards;
   
 
   .emblem {
-    transform: translateX(1rem) translateY(-4rem);
+    transform: translateX(1rem) translateY(-7rem);
     margin: 0 auto;
     height: 140px;
   width: 140px;

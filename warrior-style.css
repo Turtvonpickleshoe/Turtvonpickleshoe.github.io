@@ -393,6 +393,46 @@ animation: burger-appear 1100ms forwards;
   clip-path: circle(70.7% at 50% 50%);
   }
 
+  footer {
+  color: #fff;
+  padding: 50px 0;
+  position: fixed;
+  bottom: 0;
+  width: 98%;
+  transform: translateY(148rem);
+}
+
+footer p {
+  margin: 0;
+}
+
+.social-buttons li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.social-buttons li:last-child {
+  margin-right: 0;
+}
+
+.social-buttons a {
+  color: #fff;
+  background-color: #ea4335;
+  border-radius: 50%;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-buttons a:hover {
+  background-color: #fff;
+  color: #ea4335;
+}
+
+
 @keyframes spin {
 
   to {
@@ -454,7 +494,7 @@ animation: burger-appear 1100ms forwards;
     transform: translateX(1rem);
     margin: 0 auto;
     height: 140px;
-	width: 140px;
+	  width: 140px;
     font-size: 22px;
   } 
 
@@ -569,6 +609,9 @@ animation: burger-appear 1100ms forwards;
   margin-bottom: 6rem;
   flex-basis: calc(100% - 10px);
 }
+
+footer {
+  transform: translateY(28rem);
   
    
 
