@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Space+Mono&display=swap" rel="stylesheet">
+      <script data-cfasync="false" data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
   <title>Healing Warriors</title>
 </head>
 <body>  
@@ -56,7 +57,12 @@
 <h1>Calendar Coming Soon!</h1>
 <br>
 <div class="dates">
-<iframe src="https://calendar.google.com/calendar/embed?src=6386f368e3e40b0bde91175b74a6375147ef3b6226f4867678b7ff19c6fdbd7c%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<div class="full-calendar">
+  <div data-tockify-component="calendar" data-tockify-calendar="warriortest"></div>
+</div>
+<div class="mini-calendar">
+  <div data-tockify-component="mini" data-tockify-calendar="warriortest"></div>
+</div>
 </div>
 <script type="text/javascript" src="warrior-script.js"></script>
 	</body>
