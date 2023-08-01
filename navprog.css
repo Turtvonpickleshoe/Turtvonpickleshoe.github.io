@@ -3,17 +3,7 @@
     src: url(Lobster-Regular.ttf);
 }
 
-body {
-  background-image: url("cover-colors.png");
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: bold;
-  text-align: center;
-  height: 2050px;  
-}
+
 
 a {
   text-decoration-line: none;
@@ -34,7 +24,8 @@ a {
   margin-right: 10px;
   z-index: 4;
   position: fixed;
-  transform: translateX(10rem) translateY(-7rem);
+  transform: translateX(10rem) translateY(-13rem);
+  
   font-family: lobster;
   font-size: 32px;
   color: black;
@@ -44,9 +35,10 @@ a {
   background-size: cover;
   justify-content: center;
   align-items: center;
-
-
 } 
+
+
+
 
 .navbar {
   background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,0.30) 100%);
@@ -172,9 +164,7 @@ a {
 }
 
 
-
 .mobile {
-  width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
   gap: 4px;
@@ -245,155 +235,17 @@ animation: burger-appear 1100ms forwards;
   clip-path: circle(70.7% at 50% 50%);
   }
 
-    h1 {
-      margin-top: 6rem;
-      text-align: center;
-      transform: translateY(2rem);
-      margin-bottom: 4rem;
-    }
 
 
-.contactTitle {   
-  transform: translateX(4rem) translateY(2rem); 
-  font-size: 26px;
-  color: whitesmoke;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  width: 600px;
-  height: 230px;
-  margin-left: 25%;
-}   
+      .dates {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        position: relative;
+        padding-bottom: 75%; /* 4:3 aspect ratio */
+      }
 
-.contactTitle img {
-  position: absolute;
-  transform: translateY(-1.2rem) translatex(-50%);
-
-}
-.contactTitle h1 {
-  transform: translateY(3.4rem);
-}
-
-
-.cards  {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
-  margin-left: 6rem;
-  margin-top: 7rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  height: 460px;
-  width: 360px;  
-  border-radius: 33px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: whitesmoke;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  line-height: 1.5em;
-  text-align: left;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-.card h2 {
-  font-size: 32px;
-
-}
-
-#cardOne {
-  background-color: rgba(165, 86, 86, 0.69);
-}
-#cardTwo {
-  background-color: rgba(86, 132, 165, 0.69);
-}
-#cardThree {
-  background-color: rgba(182, 160, 85, 0.80);
-}
-
-.middle {  
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-content: center;
-  left: 50%;
-}
-
-.midCard {
-  position: relative;
-  height: 500px;
-  width: 360px;  
-  border-radius: 33px;
-  color: whitesmoke;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin-left: 25%;
-  
-}
- #middleOne {
-  position: relative;
- }
-
- #middleOne img {
-  position: absolute;
-  z-index: -1;
-  scale: 80%;
-  transform: translateY(-2.2rem) translatex(-50%);
- }
-
- .commText {
-transform: translateX(20%) translateY(60%);
-
- }
-
- #middleTwo {
-  background-color: rgba(86, 132, 165, 0.69);  
-  transform: translateY(15%);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
- }
-
- .contactInfo {
-  display: inline-block;
-  align-items: center;
-  transform: translateY(-10rem);  
-  font-size: 1.8rem;
- }
- .contactInfo p {
-  transform: translateY(-44rem);
- }
-
- .heroImage {
-  scale: 50%;
- }
-
-
-
-.dates {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    position: relative;
-    padding-bottom: 75%;
-    margin-top: 2rem;
-  }
-
-.donor-box {
-  margin-top: 10rem;
-} 
-.donor {
-  display: grid;
-  grid-template-columns: 1fr;
-}  
-
-.full-calendar {
-  display: block; /* show full calendar by default */
-}
-
-.mini-calendar {
-  display: none; /* hide mini calendar by default */
-}   
+ 
 
 
 @keyframes spin {
@@ -424,146 +276,6 @@ transform: translateX(20%) translateY(60%);
   }
 }
 
-@keyframes glowing-text-shadow-animation {
-    from {
-        text-shadow: none;
-    }
-    to {
-
-      text-shadow: 0 0 40px teal;
-
-        /*text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #008080, 0 0 70px #008080, 0 0 80px #008080, 0 0 100px #008080;*/
-    }
-  
-}
-@keyframes glow {
-    from {
-        box-shadow: none;
-    }
-    to {
-         box-shadow: 0 0 40px teal;
-    }
-  
-}
-@keyframes move-down {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(200%);
-  }
-}
-
-
-
-@media screen and (max-width: 1500px) {
-  
-
-  .emblem {
-    transform: translateX(1rem) translateY(-7rem);
-    margin: 0 auto;
-    height: 140px;
-  width: 140px;
-    font-size: 22px;
-  } 
-
-}
-
-
-@media screen and (max-width: 1350px) {
-
-  .cards {
-    grid-template-columns: 1fr 1fr;
-    margin-left: none;
-  }
-
-  .card {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #cardThree {
-    left: 50%;
-    position: relative;
-  }
-
-
-}
-@media screen and (max-width: 945px) {
-
-
-  .cards {
-    grid-template-columns: 1fr;
-    width: 95vw;
-    margin-left: 0;
-    align-items: center;
-
-  }
-  .middle {
-    grid-template-columns: 1fr;
-    width: 95vw;
-    margin-left: 0;
-    overflow: hidden;
-
-  }
-
-  .midCard {
-    margin-left: 0;
-  }
-
-  #middleOne img {
-    width: 600px;    
-    display: inline-block;
-    transform: translateX(-23rem) scale(.98);
-  }
-   #middleTwo {
-    margin-left: 1rem;
-    margin-bottom: 10rem;
-   }
-
-   #cardThree {
-    left: 0;
-    position: relative;
-    margin-bottom: 5rem;
-  }
-
-
-  .contactTitle {
-    transform: translateX(0) translateY(3rem);
-    margin-left: 0;   
-    width: 400px;
-  }
-
-  .contactInfo {
-    margin-left: 0;
-    width: 400px;
-    height: 400px;
-    transform: translateY(0);
-  }
-
-  .contactInfo p {
-  transform: translateY(-15rem);
- }
-  .heroImage {    
-    width: 400px;
-    scale: none;
-  }
-  .navbar {
-    width: 100vw;
-  }
-
-   .commText {
-    transform: translateX(0) translateY(60%);
-
- }
-
-
-}
-
-
-
-
 
 
 
@@ -575,6 +287,8 @@ transform: translateX(20%) translateY(60%);
     justify-content: space-between;
     height: 80px;
     overflow: hidden;
+    width: 100vw;
+    z-index: 10;
   }
 
   body {
@@ -612,28 +326,17 @@ transform: translateX(20%) translateY(60%);
 
 
   .emblem {
-    transform: translateX(1rem) translateY(-7rem);
+    transform: translateX(1rem) translateY(-9rem);
     margin: 0 auto;
     height: 140px;
     width: 140px;
     font-size: 22px;
+    z-index: 11;
   } 
-    h1 {
-    transform: translateY(8rem);
-  }
+  
 }
-
-  @media only screen and (max-width: 767px) {
-  .full-calendar {
-    display: none; /* hide full calendar */
-  }
-  .mini-calendar {
-    display: block; /* show mini calendar */
-  }
-}
-
-
-
+ 
+  
 
 @media screen and (max-width: 710px) {
   .menu {
@@ -641,4 +344,5 @@ transform: translateX(20%) translateY(60%);
     margin-left: 18rem;
 
       }
+
     }

@@ -16,7 +16,7 @@ menuButton.addEventListener('click', () => {
     <a href="programs.html" class="button">Programs</a>
     <a href="calendar.html" class="button">Schedule</a>
     <a href="contact.html" class="button">Get Involved</a>
-    <a href="about-us.html" class="button">About Us</a>
+    <a href="about.html" class="button">About Us</a>
     <a href="donate.html" class="button">Donate</a>
   `;
 
@@ -42,3 +42,56 @@ crossButton.addEventListener('click', () => {
   }, 1000); // remove spinning class after 1 second
 });
 });
+
+//get involved page animations
+window.onload = function () {
+  if (window.innerWidth <= 600) { // checks if the width of the window is less than or equal to 600px
+    // mobile view: elements slide in when scrolled to
+    gsap.registerPlugin(ScrollTrigger);
+    const cards = gsap.utils.toArray('.card');
+
+    cards.forEach((card) => {
+      gsap.from(card, {
+        duration: 1,
+        x: '-100%',
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: card,
+          start: "top center", // triggers the animation when the card is in the center of the viewport
+        },
+      });
+    });
+  } else {
+    // non-mobile view: elements slide in one after the other on page load
+    gsap.from(".card", {
+      duration: 1,
+      x: '-100%',
+      autoAlpha: 0,
+      stagger: 0.5
+    });
+  }
+};
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Create a new timeline
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#middleOne",
+    start: "top center", // when top of #middleOne reaches the center of the viewport
+  }
+});
+
+tl.from("#middleOne .commText", {
+  duration: 1,
+  autoAlpha: 0, // autoAlpha will manage both CSS visibility and opacity
+});
+
+/*window.onload = function() {
+    var emblem = document.querySelector('.emblem');
+    var path = window.location.pathname;
+  
+    if (path === '/donate') {
+        emblem.id = 'emblemDonate';
+    }
+}*/
