@@ -484,7 +484,7 @@ transform: translateX(20%) translateY(60%);
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 90ww;
+    width: 90vw;
     text-align: center;
   }
 
@@ -511,6 +511,9 @@ transform: translateX(20%) translateY(60%);
     margin-left: 0;
     
 
+  }
+  .card {
+    width: 380px;
   }
 
   .midCard {
@@ -546,6 +549,12 @@ transform: translateX(20%) translateY(60%);
     margin-left: 0;   
     width: 95vw;
     margin-top: 3rem;
+  }
+  .contactTitle img {
+    width: 95vw;
+  }
+  .contactTitle h1 {
+    font-size: 2.5rem;
   }
 
   .contactInfo {
