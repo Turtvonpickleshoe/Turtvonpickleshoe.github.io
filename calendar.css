@@ -355,10 +355,13 @@ transform: translateX(20%) translateY(60%);
  }
 
  .contactInfo {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   transform: translateY(-10rem);  
   font-size: 1.8rem;
+  margin-left: auto;
+  margin-right: auto;
  }
  .contactInfo p {
   transform: translateY(-44rem);
@@ -481,6 +484,8 @@ transform: translateX(20%) translateY(60%);
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    width: 90ww;
+    text-align: center;
   }
 
   #cardThree {
@@ -495,7 +500,7 @@ transform: translateX(20%) translateY(60%);
 
   .cards {
     grid-template-columns: 1fr;
-    width: 95vw;
+    width: 90vw;
     margin-left: 0;
     align-items: center;
 
@@ -504,7 +509,7 @@ transform: translateX(20%) translateY(60%);
     grid-template-columns: 1fr;
     width: 95vw;
     margin-left: 0;
-    overflow: hidden;
+    
 
   }
 
@@ -513,13 +518,20 @@ transform: translateX(20%) translateY(60%);
   }
 
   #middleOne img {
-    width: 600px;    
+    width: 100vw;    
     display: inline-block;
     transform: translateX(-23rem) scale(.98);
+    display: none;
   }
+  #middleOne {
+    background-color: rgba(165, 86, 86, 0.69);
+    height: 300px;
+    padding: .8rem;
+  }
+
    #middleTwo {
-    margin-left: 1rem;
-    margin-bottom: 10rem;
+    width: 90vw
+    margin-bottom: 10rem;    
    }
 
    #cardThree {
@@ -532,29 +544,41 @@ transform: translateX(20%) translateY(60%);
   .contactTitle {
     transform: translateX(0) translateY(3rem);
     margin-left: 0;   
-    width: 400px;
+    width: 95vw;
+    margin-top: 3rem;
   }
 
   .contactInfo {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
     margin-left: 0;
-    width: 400px;
-    height: 400px;
-    transform: translateY(0);
+    width: 90vw;
+    height: 180px;
+    transform: translateY(15%);
+    background-color: rgba(182, 160, 85, 0.80);
+    border-radius: 33px;
+    color: whitesmoke;
+
   }
 
   .contactInfo p {
-  transform: translateY(-15rem);
+  transform: translateY(0);
+  font-size: 1.7rem;
+
  }
   .heroImage {    
-    width: 400px;
+    width: 90vw;
     scale: none;
+    display: none;
   }
   .navbar {
     width: 100vw;
   }
 
    .commText {
-    transform: translateX(0) translateY(60%);
+    transform: translateX(0) translateY(0);
 
  }
 
@@ -612,12 +636,13 @@ transform: translateX(20%) translateY(60%);
 
 
   .emblem {
-    transform: translateX(1rem) translateY(-7rem);
+    transform: translateX(.5rem) translateY(-7.5rem);
     margin: 0 auto;
-    height: 140px;
-    width: 140px;
-    font-size: 22px;
-  } 
+    height: 136px;
+    width: 136px;
+    font-size: 20px;
+    z-index: 11;
+  }  
     h1 {
     transform: translateY(8rem);
   }

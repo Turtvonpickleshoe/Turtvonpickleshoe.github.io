@@ -326,11 +326,11 @@ animation: burger-appear 1100ms forwards;
 
 
   .emblem {
-    transform: translateX(1rem) translateY(-9rem);
+    transform: translateX(.20rem) translateY(-9.75rem);
     margin: 0 auto;
-    height: 140px;
-    width: 140px;
-    font-size: 22px;
+    height: 136px;
+    width: 136px;
+    font-size: 20px;
     z-index: 11;
   } 
   

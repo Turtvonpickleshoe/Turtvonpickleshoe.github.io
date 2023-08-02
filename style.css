@@ -180,42 +180,63 @@ img.next {
     margin-left: auto;
     flex-basis: calc(100% - 20px);
     margin-top: 9rem;
+    width: 95vw;    
+  }
+  .backWrap {
+    display: inline-block;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
 
   }
 
   .slideButtons {
-    transform: translateX(0rem) translateY(3rem);
-    width: 400px;
-    margin-top: 2rem;
+    transform: translateX(-1rem) translateY(1rem);
+    width: 95vw;
+    margin-top: 1rem;
+    
+   }
 
+  .slideButtons button {
+    margin-right: auto;
+    width: 116px;
+  }
+  #myButtonThree {
+    margin-right: 0;
   }
 
   .hero {
     margin-bottom: 25%;
     text-align: center;
     z-index: 6;
-    margin-left: 0;
+    margin-left: auto;
     color: whitesmoke;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     width: 90vw;
+    font-size: 14px;
 
    }
    .backImage {
-    width: 130%;
-    transform: translateX(-48%) translateY(-3rem);
+    width: 80vw;
+    transform: translateX(-48%) translateY(-2rem) scale(1.2);
    }
 
    .slide {
     width: 85vw;
-    margin-left: .2rem;
+    margin-left: auto;
     padding: 1rem;
     background: linear-gradient(230deg, #02C0FC 13.53%, rgba(254, 152, 0, 0.35) 64.06%);    
     
    }
 
    .heroImage {
-    width: 140%;
-    transform: translateX(-50%) translateY(-130px);
+    width: 100vw;
+    transform: translateX(-50%) translateY(-5rem);
    }
 
    img  {
