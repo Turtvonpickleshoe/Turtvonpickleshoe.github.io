@@ -501,7 +501,7 @@ transform: translateX(20%) translateY(60%);
   .cards {
     grid-template-columns: 1fr;
     width: 90vw;
-    margin-left: 0;
+    margin-left: 2.5%;
     align-items: center;
 
   }
@@ -513,7 +513,7 @@ transform: translateX(20%) translateY(60%);
 
   }
   .card {
-    width: 340px;
+    width: 320px;
   }
 
   .midCard {
@@ -533,8 +533,9 @@ transform: translateX(20%) translateY(60%);
   }
 
    #middleTwo {
-    width: 90vw
-    margin-bottom: 10rem;    
+    width: 85vw;
+    margin-bottom: 6rem;    
+    margin-left: 5%;
    }
 
    #cardThree {
@@ -562,13 +563,14 @@ transform: translateX(20%) translateY(60%);
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    margin-left: 0;
+    margin-left: 1%;
     width: 90vw;
     height: 180px;
     transform: translateY(15%);
     background-color: rgba(182, 160, 85, 0.80);
     border-radius: 33px;
     color: whitesmoke;
+    padding: .5rem;
 
   }
 
