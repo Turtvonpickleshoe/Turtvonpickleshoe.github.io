@@ -12,7 +12,9 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bold;
   text-align: center;
-  height: 2050px;  
+  height: 2050px; 
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0); 
 }
 
 a {
@@ -34,7 +36,7 @@ a {
   margin-right: 10px;
   z-index: 4;
   position: fixed;
-  transform: translateX(10rem) translateY(-7rem);
+  transform: translateX(8rem) translateY(-7.2rem);
   font-family: lobster;
   font-size: 32px;
   color: black;
@@ -58,6 +60,7 @@ a {
   gap: 1rem;
   backdrop-filter: blur(4px);
   z-index: 2;
+  transform: translateY(-120%);
 }
 
 .nav-item {
@@ -237,6 +240,7 @@ a {
 .mobile-clip {
 clip-path: circle(0.3% at 100% 0);
 animation: burger-appear 1100ms forwards;
+transform: translateY(-40%);
 
 }
 
@@ -535,7 +539,7 @@ transform: translateX(20%) translateY(60%);
    #middleTwo {
     width: 85vw;
     margin-bottom: 6rem;    
-    margin-left: 8%;
+    margin-left: 10%;
    }
 
    #cardThree {
