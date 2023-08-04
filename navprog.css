@@ -166,7 +166,7 @@ a {
 
 .mobile {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr;  
   gap: 4px;
   position: fixed;
   top: 0;
@@ -174,7 +174,7 @@ a {
   right: 0;
   margin: auto;
   z-index: 9999;
-  background: linear-gradient(323deg, rgba(45, 253, 220, 1) 0%, rgba(34, 195, 167, 0.95) 100%);
+  background: linear-gradient(230deg, #02EDFC 13.53%, rgba(0, 25, 254, 0.95) 64.06%);
   padding-bottom: 1rem;
   border-bottom-right-radius: .5rem;
   border-bottom-left-radius: .5rem;

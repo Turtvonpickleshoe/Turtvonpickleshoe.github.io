@@ -16,6 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: black;
 
 }
 
@@ -257,6 +258,7 @@ header {
 
 h2 {
 	text-align: center;
+  font-size: 32px;
 }
 p {
 	margin-bottom: 20px;
@@ -425,21 +427,50 @@ footer p {
   margin-right: 0;
 }
 
+
 .social-buttons a {
   color: #fff;
-  background-color: #ea4335;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   display: inline-block;
-  height: 40px;
   line-height: 40px;
   text-align: center;
-  width: 40px;
   transition: all 0.2s ease-in-out;
+  transform: scale(1);
+  background-size: 20%;
+}
+.social-buttons a img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .social-buttons a:hover {
   background-color: #fff;
   color: #ea4335;
+  transform: scale(1.5) translateY(-.25rem);
+}
+
+.social-buttons a:active {
+  transform: scale(1.25);
+}
+
+/* Set unique background image for each button */
+.social-buttons .fb {
+  background: url("fbicon.png") no-repeat center center;
+  background-size: 100%;
+}
+
+.social-buttons .xtw {
+  background: url("xicon.png") no-repeat center center;
+  background-size: 100%;
+}
+
+.social-buttons .link {
+  background: url("liicon.png") no-repeat center center;
+  background-size: 100%;
 }
 
 

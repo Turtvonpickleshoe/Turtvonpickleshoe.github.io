@@ -184,7 +184,7 @@ img.next {
   }
   .backWrap {
     display: inline-block;
-    width: 100vw;
+    width: 90vw;
     overflow: hidden;
   }
 
@@ -196,14 +196,20 @@ img.next {
   }
 
   .slideButtons {
-    transform: translateX(-1rem) translateY(1rem);
+    position: relative;
+    display:flex;
+    transform: translateX(-1rem) translateY(-1rem);
     width: 95vw;
     margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;  
     
    }
 
   .slideButtons button {
-    margin-right: auto;
+    display: block;
+    margin-right: 1rem;
+    margin-left: 1rem;
     width: 116px;
   }
   #myButtonThree {
@@ -211,31 +217,37 @@ img.next {
   }
 
   .hero {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 25%;
     text-align: center;
     z-index: 6;
     margin-left: auto;
+    margin-right: auto;
     color: whitesmoke;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     width: 90vw;
     font-size: 14px;
+    align-items: center;
+    justify-content: center;
 
    }
    .backImage {
-    width: 80vw;
+    width: 392px;
     transform: translateX(-48%) translateY(-2rem) scale(1.2);
    }
 
    .slide {
-    width: 85vw;
+    width: 400px;
     margin-left: auto;
+    margin-right: auto;
     padding: 1rem;
     background: linear-gradient(230deg, #02C0FC 13.53%, rgba(254, 152, 0, 0.35) 64.06%);    
     
    }
-
+ 
    .heroImage {
-    width: 100vw;
+    width: 400px;
     transform: translateX(-50%) translateY(-5rem);
    }
 
@@ -251,4 +263,27 @@ img.next {
     transform: translateY(-1rem);
    }
 
+}
+
+@media screen and (max-width: 500px) {
+    .slide {
+    width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    background: linear-gradient(230deg, #02C0FC 13.53%, rgba(254, 152, 0, 0.35) 64.06%);    
+    
+   }
+
+   .backImage {
+    width: 300px;
+
+
+ }
+ .heroImage {
+  width: 85vw;
+ }
+ .slideButtons {
+  transform: translateX(-1rem) translateY(2rem);
+ }
 }

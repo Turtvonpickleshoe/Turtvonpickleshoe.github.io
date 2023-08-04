@@ -355,9 +355,21 @@ transform: translateX(20%) translateY(60%);
   background-color: rgba(86, 132, 165, 0.69);  
   transform: translateY(15%);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
+  z-index: 3;
+  padding: 1.5rem;
  }
 
+ #openForum {
+  display: inline-block; /* make the anchor tag a block element to add padding */
+  padding: 10px 20px; /* add padding to create the button look */
+  background-color: rgba(0, 123, 255, 0.9); /* set the background color */
+  color: #fff; /* set the font color */
+  border-radius: 1rem; 
+ }
+
+#openForum :hover {
+  background-color: #0062cc; /* darken the background color on hover */
+}
  .contactInfo {
   display: flex;
   flex-direction: column;
@@ -481,14 +493,13 @@ transform: translateX(20%) translateY(60%);
 
   .cards {
     grid-template-columns: 1fr 1fr;
-    margin-left: none;
+    
   }
 
   .card {
     position: relative;
     margin-left: auto;
-    margin-right: auto;
-    width: 90vw;
+    margin-right: auto; 
     text-align: center;
   }
 
@@ -521,7 +532,8 @@ transform: translateX(20%) translateY(60%);
   }
 
   .midCard {
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #middleOne img {
@@ -537,9 +549,10 @@ transform: translateX(20%) translateY(60%);
   }
 
    #middleTwo {
-    width: 85vw;
-    margin-bottom: 6rem;    
-    margin-left: 10%;
+    width: 320px;
+    margin-bottom: 6rem; 
+    margin-left: auto;
+    margin-right: auto;       
    }
 
    #cardThree {
@@ -556,7 +569,7 @@ transform: translateX(20%) translateY(60%);
     margin-top: 3rem;
   }
   .contactTitle img {
-    width: 95vw;
+    width: 391.35px;
   }
   .contactTitle h1 {
     font-size: 2.5rem;

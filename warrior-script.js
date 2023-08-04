@@ -43,6 +43,17 @@ crossButton.addEventListener('click', () => {
 });
 });
 
+document.getElementById("openForum").addEventListener("click", function() {
+  // Specify the URL or content you want to display in the popup window
+  var popupURL = "signup.html";
+
+  // Options for the popup window (size, position, etc.)
+  var popupOptions = "width=400,height=300,left=100,top=100";
+
+  // Open the popup window
+  window.open(popupURL, "_blank", popupOptions);
+});
+
 //get involved page animations
 window.onload = function () {
   if (window.innerWidth <= 600) { // checks if the width of the window is less than or equal to 600px
