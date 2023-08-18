@@ -106,3 +106,13 @@ tl.from("#middleOne .commText", {
         emblem.id = 'emblemDonate';
     }
 }*/
+
+const menuToggle = document.getElementsByClassName('menu');
+const menu = document.getElementsByClassName('mobile'); // Your menu element
+
+menuToggle.addEventListener('click', () => {
+  const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+  
+  menuToggle.setAttribute('aria-expanded', !expanded);
+  menu.style.display = expanded ? 'none' : 'block';
+});
